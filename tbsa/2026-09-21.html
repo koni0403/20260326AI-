@@ -25,7 +25,7 @@ footer{padding:18px 2px;color:var(--muted);font-size:12px}
 <div class="card kpi"><small>Meta 總花費</small><b>US$87.50</b><div class="note">競賽／研習／證照／品牌整合</div></div>
 <div class="card kpi"><small>Meta 連結點擊</small><b>1,326</b><div class="note">證照檢定拉量最強</div></div>
 <div class="card kpi"><small>Landing Page View</small><b>1,161</b><div class="note">不等於完成報名</div></div>
-<div class="card kpi"><small>GA4 報名表單點擊</small><b>4</b><div class="note">click_registration_form 已開始進資料</div></div>
+<div class="card kpi"><small>可歸因 Meta 廣告表單點擊</small><b>1</b><div class="note">已由 GA4 Ad Content 對回 Meta Ad ID</div></div>
 </section>
 
 <section class="grid row" style="margin-top:14px">
@@ -45,6 +45,39 @@ footer{padding:18px 2px;color:var(--muted);font-size:12px}
 </table></div></div>
 </section>
 
+
+<section class="card" style="margin-top:14px">
+<h2>表單點擊／廣告歸因</h2>
+<div class="scroll"><table>
+<tr><th>來源類型</th><th>Campaign</th><th>廣告名稱／來源</th><th>Meta 成效</th><th>click_registration_form</th><th>歸因狀態</th></tr>
+<tr>
+<td><span class="badge b">Meta 廣告</span></td>
+<td>新_流量</td>
+<td>0916_TBSA帶你找到下一步_MKT072_1580974537377349<br><span class="note">Ad ID：120251126310570062</span></td>
+<td>US$10.49｜113 Link Click｜92 LPV</td>
+<td><b>1</b></td>
+<td><span class="pill">可明確歸因</span></td>
+</tr>
+<tr>
+<td>Facebook Organic</td>
+<td>(organic)</td>
+<td>FB_POST / 0916_教師研習營_MKT072</td>
+<td>非付費廣告</td>
+<td>有事件</td>
+<td><span class="pill">自然貼文</span></td>
+</tr>
+<tr>
+<td>其他來源</td>
+<td>—</td>
+<td>Google Organic／ChatGPT referral 等</td>
+<td>非 Meta 廣告</td>
+<td>有事件</td>
+<td><span class="pill">不可算入廣告轉換</span></td>
+</tr>
+</table></div>
+<div class="note" style="margin-top:10px">判定方式：GA4 的 session_manual_campaign_name／session_manual_ad_content 與 Meta Campaign ID／Ad ID 交叉比對。只有能對回 Meta Ad ID 的事件，才列入「可歸因 Meta 廣告表單點擊」。</div>
+</section>
+
 <section class="grid row2" style="margin-top:14px">
 <div class="card"><h2>本月重點洞察</h2><ul>
 <li><b>證照檢定：</b> CPC 與 LPV 成本最低，最會帶流量；但 GA4 平均參與時間短，需要補強轉換內容。</li>
@@ -58,7 +91,7 @@ footer{padding:18px 2px;color:var(--muted);font-size:12px}
 <li><b>研習：</b> 保留 AI 興趣受眾，新增「老師最後能帶走什麼」轉換素材。</li>
 <li><b>證照：</b> 從履歷焦慮延伸到「企業為什麼相信這張證明」。</li>
 <li><b>品牌：</b> 保留「TBSA帶你找到下一步」做認知，與轉換廣告分開。</li>
-<li><b>追蹤：</b> 固定用 click_registration_form 作為漏斗 KPI。</li>
+<li><b>追蹤：</b> 固定用 click_registration_form 作為漏斗 KPI，並另外拆出「可歸因 Meta 廣告表單點擊」，避免把 Organic／Referral 算成廣告轉換。</li>
 </ul></div>
 </section>
 
